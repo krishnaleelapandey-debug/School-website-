@@ -1,1 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore photographs of St. Thomas School, Khalilabad, including school events, performances and sports.">
+<title>Gallery | St. Thomas School, Khalilabad</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Gallery-only styles; the rest of the site's design remains unchanged. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 28px 0 42px;
+}
+.gallery figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(20, 35, 60, .12);
+}
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+.gallery figcaption {
+  padding: 12px 14px;
+  color: #183454;
+  font-weight: 600;
+  font-size: .96rem;
+}
+@media (max-width: 800px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .gallery img { height: 190px; }
+}
+@media (max-width: 480px) {
+  .gallery { grid-template-columns: 1fr; }
+  .gallery img { height: auto; max-height: 320px; }
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <span>📍 Khalilabad, Sant Kabir Nagar, Uttar Pradesh</span>
+  <span><a href="mailto:stthomaskhalilabad@gmail.com">✉ stthomaskhalilabad@gmail.com</a> &nbsp;·&nbsp; <a href="https://stskhalilabad.in/" target="_blank" rel="noopener">Official website ↗</a></span>
+</div>
 
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">
+      <img src="school-logo.jpg" alt="School logo">
+      <span><strong>St. Thomas School</strong><small>Khalilabad · Learning for life</small></span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">☰ Menu</button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="facilities.html">Facilities</a>
+      <a href="admissions.html">Admissions</a>
+      <a class="active" href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a class="official" href="https://stskhalilabad.in/" target="_blank" rel="noopener">Official site ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="inner">
+      <span class="kicker">Our Gallery</span>
+      <h1>A glimpse of school life</h1>
+      <p>Celebrating school events, creativity, teamwork and achievements at St. Thomas School, Khalilabad.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="gallery">
+      <figure><img src="gallery-photos/independence-day-celebration.webp" alt="Students celebrating Independence Day at school" loading="lazy"><figcaption>Independence Day Celebration</figcaption></figure>
+      <figure><img src="gallery-photos/cultural-performance.webp" alt="Students performing on the school stage" loading="lazy"><figcaption>Cultural Performance</figcaption></figure>
+      <figure><img src="gallery-photos/christmas-celebration.jpg" alt="Students taking part in a Christmas celebration" loading="lazy"><figcaption>Christmas Celebration</figcaption></figure>
+      <figure><img src="gallery-photos/school-assembly.jpg" alt="Students gathered for a school assembly" loading="lazy"><figcaption>School Assembly</figcaption></figure>
+      <figure><img src="gallery-photos/dance-performance.jpg" alt="Students performing a group dance" loading="lazy"><figcaption>Dance Performance</figcaption></figure>
+      <figure><img src="gallery-photos/school-ceremony.jpg" alt="School ceremony with staff and guests" loading="lazy"><figcaption>School Ceremony</figcaption></figure>
+      <figure><img src="gallery-photos/football-team.jpg" alt="School football team" loading="lazy"><figcaption>Football Team</figcaption></figure>
+      <figure><img src="gallery-photos/girls-basketball-team.jpg" alt="Girls basketball team with awards" loading="lazy"><figcaption>Girls’ Basketball Team</figcaption></figure>
+      <figure><img src="gallery-photos/stage-performance.jpg" alt="Students performing on stage" loading="lazy"><figcaption>Stage Performance</figcaption></figure>
+      <figure><img src="gallery-photos/basketball-team.jpg" alt="School basketball team on the court" loading="lazy"><figcaption>Basketball Team</figcaption></figure>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h3>St. Thomas School, Khalilabad</h3>
+      <p>A student-made school information website highlighting the school's history, academics, facilities and admission information.</p>
+      <p class="small">For official notices and current details, please visit the school's own website.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li><li><a href="facilities.html">Facilities</a></li>
+        <li><a href="admissions.html">Admissions</a></li><li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Official links</h4>
+      <ul>
+        <li><a href="https://stskhalilabad.in/" target="_blank" rel="noopener">School website ↗</a></li>
+        <li><a href="mailto:stthomaskhalilabad@gmail.com">Email the school ↗</a></li>
+        <li><a href="https://stskhalilabad.in/contact-us" target="_blank" rel="noopener">Official contact page ↗</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="credit">
+    <span>© <span data-year></span> Student-made information project</span>
+    <span><strong>Created by Krishna Pandey</strong></span>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
