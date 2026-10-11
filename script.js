@@ -30,12 +30,17 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Select common content sections and gallery elements.
-  const elements = document.querySelectorAll(
-    "main section, main article, main > div, " +
-    ".feature-card, .facility-card, .academic-card, " +
-    ".gallery-item, .gallery-card, .gallery-grid > *, " +
-    ".gallery-container > *, .facility, .card"
-  );
+  
+const elements = document.querySelectorAll(
+  "main section, " +
+  ".page-hero .inner, " +
+  ".wrap > *, " +
+  ".gallery figure, " +
+  ".card, " +
+  ".stats-row .stat, " +
+  ".split > *"
+);
+
 
   if (!elements.length) {
     console.log("Scroll reveal: no matching elements found.");
