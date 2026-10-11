@@ -79,8 +79,26 @@ button:active,
 }
 
 .js-enabled .reveal {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 1;
+  transform: translateY(0);
+  animation: sts-reveal-in 0.7s ease both;
+}
+
+.js-enabled .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: sts-reveal-in 0.7s ease both;
+}
+
+@keyframes sts-reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .js-enabled .reveal.is-visible {
