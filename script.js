@@ -16,45 +16,37 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+
 /* ========================================
    ST. THOMAS SCHOOL — SCROLL REVEAL
    ======================================== */
 
-(() => {
-  // Avoid hiding content when motion is reduced
-  // or the browser does not support IntersectionObserver.
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
-
+document.addEventListener("DOMContentLoaded", function () {
   if (
-    reduceMotion ||
-    !("IntersectionObserver" in window)
+    !("IntersectionObserver" in window) ||
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
   ) {
     return;
   }
 
-  const revealSelectors = [
-    "main section",
-    ".feature-card",
-    ".facility-card",
-    ".academic-card",
-    ".gallery-item",
-    ".gallery-card",
-    ".gallery-grid > *"
-  ];
-
+  // Select common content sections and gallery elements.
   const elements = document.querySelectorAll(
-    revealSelectors.join(",")
+    "main section, main article, main > div, " +
+    ".feature-card, .facility-card, .academic-card, " +
+    ".gallery-item, .gallery-card, .gallery-grid > *, " +
+    ".gallery-container > *, .facility, .card"
   );
 
-  if (!elements.length) return;
+  if (!elements.length) {
+    console.log("Scroll reveal: no matching elements found.");
+    return;
+  }
 
   document.documentElement.classList.add("js-enabled");
 
   const observer = new IntersectionObserver(
-    (entries, currentObserver) => {
-      entries.forEach((entry) => {
+    function (entries, currentObserver) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
           currentObserver.unobserve(entry.target);
@@ -62,19 +54,15 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
-      threshold: 0.12,
-      rootMargin: "0px 0px -35px 0px"
+      threshold: 0.05,
+      rootMargin: "0px 0px 0px 0px"
     }
   );
 
-  elements.forEach((element, index) => {
+  elements.forEach(function (element, index) {
     element.classList.add("reveal");
-
-    // Small stagger between nearby items.
     element.style.transitionDelay =
-      `${Math.min(index % 4, 3) * 80}ms`;
-
+      (index % 4) * 70 + "ms";
     observer.observe(element);
   });
-})();
-
+});
