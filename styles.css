@@ -694,4 +694,35 @@ main .actions a {
   }
 }
 
+/* RESTORE WEBSITE HOVER AND TRANSITION EFFECTS */
+.card,
+.info-card,
+.facility-card,
+.video-card,
+.gallery-card,
+button,
+.btn,
+.button,
+a {
+  transition: color 0.25s ease,
+              background-color 0.25s ease,
+              box-shadow 0.25s ease,
+              transform 0.25s ease,
+              opacity 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card:hover,
+.info-card:hover,
+.facility-card:hover,
+.video-card:hover,
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(16, 43, 80, 0.14);
+}
+
+
 
